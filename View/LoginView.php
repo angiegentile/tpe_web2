@@ -7,9 +7,15 @@ class LoginView{
        $this->smarty= new Smarty(); 
     }
 
-    function viewLogin(){
+    function viewRegister(){
+        $this->smarty->assign('base_url', BASE_URL);
+        $this->smarty->assign('titulo','registrarse');
+        $this->smarty->display('templates/registerForm.tpl');
+    }
+    function viewLogin($mensaje = ""){
         $this->smarty->assign('base_url', BASE_URL);
         $this->smarty->assign('titulo','ingresar');
+        $this->smarty->assign('message', $mensaje);
         $this->smarty->display('templates/login.tpl');
     }
     function toAdmin(){
@@ -18,5 +24,5 @@ class LoginView{
     function toLogin(){
         header("Location: ". BASE_URL."login");
     }
-
+    
 }

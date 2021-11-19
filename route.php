@@ -66,6 +66,12 @@ switch($parametros[0]){
     case 'login';
         $loginController->showLogin();
         break;
+    case 'registerForm';
+        $loginController->showRegisterForm();
+        break;
+    case 'register';
+        $loginController->register();
+        break;
     case 'verifyLogin';
         $loginController->verifyLogin();
         break;

@@ -1,4 +1,5 @@
 {include file="header.tpl"}
+<div> {$message}<div>
     <h2>los mejores accesorios para vos</h2>
     <ul>
         <li><a href="showProducts" target="_self">Ver Productos</a></li>

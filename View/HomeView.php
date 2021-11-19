@@ -10,9 +10,10 @@ class HomeView{
     }
 
 
-    function viewHome(){
+    function viewHome($mensaje = ""){
         $this->smarty->assign('base_url', BASE_URL);
         $this->smarty->assign('titulo', 'AQUAMOOD');
+        $this->smarty->assign('message', $mensaje);
         $this->smarty->display('templates/home.tpl');
 
     }
